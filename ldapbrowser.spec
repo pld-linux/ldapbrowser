@@ -1,4 +1,5 @@
 Summary:	LDAP Browser/Editor
+Summary(pl):	Przegl±darka/edytor LDAP
 Name:		ldapbrowser
 Version:	2.82
 %define	_beta 2
@@ -30,13 +31,23 @@ Features:
 - Named sessions
 - Attribute viewers/editors.
 
+%description -l pl
+Mo¿liwo¶ci:
+- przegl±danie, przeszukiwanie i modyfikowanie DIT
+- obs³uga LDIF
+- wzorce obiektów
+- obs³uga warto¶ci binarnych
+- obs³uga LDAP v3
+- obs³uga SSL
+- interfejs przeci±gnij-i-upu¶æ, kopiuj-wklej
+- nazwane sesje
+- przegl±danie i modyfikowanie atrybutów.
+
 %prep
 %setup -q -n %{name}
 %patch0 -p1
 rm -f *.lnk *.bat
 rm -f *.sample lbe.old*
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
