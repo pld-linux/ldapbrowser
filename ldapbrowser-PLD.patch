@@ -1,0 +1,12 @@
+--- ./lbe.sh~	2001-04-26 00:32:30.000000000 +0200
++++ ./lbe.sh	2005-06-03 18:09:57.000000000 +0300
+@@ -15,4 +15,8 @@
+     ARG1=$1
+ fi
+ 
+-${JAVA} ${OPTIONS} -jar lbe.jar $ARG1 $2 $3 $4 $5 $6 $7 $8 $9
++mkdir -p ${HOME}/.ldapbrowser
++[ -e ${HOME}/.ldapbrowser/attributes.config ] || cp /usr/share/ldapbrowser/attributes.config ${HOME}/.ldapbrowser/
++
++cd ${HOME}/.ldapbrowser
++${JAVA} ${OPTIONS} -jar /usr/share/ldapbrowser/lbe.jar $ARG1 $2 $3 $4 $5 $6 $7 $8 $9
