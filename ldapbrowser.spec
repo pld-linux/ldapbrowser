@@ -3,7 +3,7 @@ Summary(pl):	Przegl±darka/edytor LDAP
 Name:		ldapbrowser
 Version:	2.82
 %define	_beta 2
-Release:	0.b%{_beta}.4
+Release:	0.b%{_beta}.5
 Epoch:		0
 License:	?
 Group:		Applications
@@ -56,6 +56,7 @@ install -d $RPM_BUILD_ROOT{%{_datadir},%{_bindir}}
 cp -a */ $RPM_BUILD_ROOT%{_datadir}
 cp -a *.config *.jar $RPM_BUILD_ROOT%{_datadir}
 install lbe.sh $RPM_BUILD_ROOT%{_bindir}/lbe
+ln -s lbe $RPM_BUILD_ROOT%{_bindir}/ldapbrowser
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,4 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.TXT LICENSE.ICONS *.html
 %attr(755,root,root) %{_bindir}/lbe
+%attr(755,root,root) %{_bindir}/ldapbrowser
 %{_datadir}
