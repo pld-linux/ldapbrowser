@@ -2,8 +2,9 @@ Summary:	LDAP Browser/Editor
 Summary(pl):	Przegl±darka/edytor LDAP
 Name:		ldapbrowser
 Version:	2.82
-%define	_beta 2
-Release:	0.b%{_beta}.5
+%define	_beta	2
+%define	_rel	6
+Release:	0.b%{_beta}.%{_rel}
 Epoch:		0
 License:	?
 Group:		Applications
@@ -14,6 +15,7 @@ NoSource:	0
 Patch0:		%{name}-PLD.patch
 URL:		http://www-unix.mcs.anl.gov/~gawor/ldap/
 Requires:	jre >= 1.2.2
+Requires:	jre-X11
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
