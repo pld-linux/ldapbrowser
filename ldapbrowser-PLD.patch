@@ -1,12 +1,22 @@
---- ./lbe.sh~	2001-04-26 00:32:30.000000000 +0200
-+++ ./lbe.sh	2005-06-03 18:09:57.000000000 +0300
-@@ -15,4 +15,8 @@
-     ARG1=$1
- fi
+--- ./lbe.sh	2005-06-03 18:09:57.000000000 +0300
++++ ldapbrowser/lbe.sh	2006-07-19 15:33:08.165233619 +0300
+@@ -2,12 +2,6 @@
  
+ OPTIONS=
+ 
+-if [ ! -d "$JAVA_HOME" ] ; then
+-    JAVA=java
+-  else
+-    JAVA=${JAVA_HOME}/bin/java
+-fi
+-
+ if [ "$1" = "fix13" ] ; then
+     OPTIONS="${OPTIONS} -Xbootclasspath/p:lib/ldap.jar:lib/jndi.jar:lib/providerutil.jar:lib/ldapbp.jar"
+     ARG1=
+@@ -18 +12,5 @@
 -${JAVA} ${OPTIONS} -jar lbe.jar $ARG1 $2 $3 $4 $5 $6 $7 $8 $9
 +mkdir -p ${HOME}/.ldapbrowser
 +[ -e ${HOME}/.ldapbrowser/attributes.config ] || cp /usr/share/ldapbrowser/attributes.config ${HOME}/.ldapbrowser/
 +
 +cd ${HOME}/.ldapbrowser
-+${JAVA} ${OPTIONS} -jar /usr/share/ldapbrowser/lbe.jar $ARG1 $2 $3 $4 $5 $6 $7 $8 $9
++java ${OPTIONS} -jar /usr/share/ldapbrowser/lbe.jar $ARG1 $2 $3 $4 $5 $6 $7 $8 $9
