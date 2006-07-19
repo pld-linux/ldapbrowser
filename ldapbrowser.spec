@@ -2,14 +2,14 @@ Summary:	LDAP Browser/Editor
 Summary(pl):	Przegl±darka/edytor LDAP
 Name:		ldapbrowser
 Version:	2.82
-%define	_beta	2
-%define	_rel	6
-Release:	0.b%{_beta}.%{_rel}
+%define	_beta	b2
+%define	_rel	7
+Release:	0.%{_beta}.%{_rel}
 Epoch:		0
 License:	?
 Group:		Applications
 %define	_ver %(echo %{version} | tr -d .)
-Source0:	http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/Browser%{_ver}b%{_beta}.tar.gz
+Source0:	http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/Browser%{_ver}%{_beta}.tar.gz
 # NoSource0-md5:	810f8a3940644e5a750a4feec00494ff
 NoSource:	0
 Patch0:		%{name}-PLD.patch
