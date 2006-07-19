@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=LDAP Browser
+Comment=LDAP directory editor
+GenericName=LDAP Editor
+Exec=ldapbrowser
+Icon=password
+Terminal=false
+Type=Application
+# vi: encoding=utf-8
