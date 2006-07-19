@@ -1,17 +1,18 @@
+%define	_beta	b2
+%define	_rel	8
+%define	_ver %(echo %{version} | tr -d .)
 Summary:	LDAP Browser/Editor
 Summary(pl):	Przegl±darka/edytor LDAP
 Name:		ldapbrowser
 Version:	2.82
-%define	_beta	b2
-%define	_rel	7
 Release:	0.%{_beta}.%{_rel}
 Epoch:		0
 License:	?
 Group:		Applications
-%define	_ver %(echo %{version} | tr -d .)
 Source0:	http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/Browser%{_ver}%{_beta}.tar.gz
 # NoSource0-md5:	810f8a3940644e5a750a4feec00494ff
 NoSource:	0
+Source1:	%{name}.desktop
 Patch0:		%{name}-PLD.patch
 URL:		http://www-unix.mcs.anl.gov/~gawor/ldap/
 Requires:	jre >= 1.2.2
@@ -59,6 +60,7 @@ cp -a */ $RPM_BUILD_ROOT%{_datadir}
 cp -a *.config *.jar $RPM_BUILD_ROOT%{_datadir}
 install lbe.sh $RPM_BUILD_ROOT%{_bindir}/lbe
 ln -s lbe $RPM_BUILD_ROOT%{_bindir}/ldapbrowser
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/ldapbrowser.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,4 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES.TXT LICENSE.ICONS *.html
 %attr(755,root,root) %{_bindir}/lbe
 %attr(755,root,root) %{_bindir}/ldapbrowser
+%{_desktopdir}/ldapbrowser.desktop
 %{_datadir}
