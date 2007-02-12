@@ -2,7 +2,7 @@
 %define	_rel	8
 %define	_ver %(echo %{version} | tr -d .)
 Summary:	LDAP Browser/Editor
-Summary(pl):	Przegl±darka/edytor LDAP
+Summary(pl.UTF-8):   PrzeglƒÖdarka/edytor LDAP
 Name:		ldapbrowser
 Version:	2.82
 Release:	0.%{_beta}.%{_rel}
@@ -34,17 +34,17 @@ Features:
 - Named sessions
 - Attribute viewers/editors.
 
-%description -l pl
-Moøliwo∂ci:
-- przegl±danie, przeszukiwanie i modyfikowanie DIT
-- obs≥uga LDIF
-- wzorce obiektÛw
-- obs≥uga warto∂ci binarnych
-- obs≥uga LDAP v3
-- obs≥uga SSL
-- interfejs przeci±gnij-i-upu∂Ê, kopiuj-wklej
+%description -l pl.UTF-8
+Mo≈ºliwo≈õci:
+- przeglƒÖdanie, przeszukiwanie i modyfikowanie DIT
+- obs≈Çuga LDIF
+- wzorce obiekt√≥w
+- obs≈Çuga warto≈õci binarnych
+- obs≈Çuga LDAP v3
+- obs≈Çuga SSL
+- interfejs przeciƒÖgnij-i-upu≈õƒá, kopiuj-wklej
 - nazwane sesje
-- przegl±danie i modyfikowanie atrybutÛw.
+- przeglƒÖdanie i modyfikowanie atrybut√≥w.
 
 %prep
 %setup -q -n %{name}
