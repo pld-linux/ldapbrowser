@@ -2,7 +2,7 @@
 %define	_rel	8
 %define	_ver %(echo %{version} | tr -d .)
 Summary:	LDAP Browser/Editor
-Summary(pl.UTF-8):   Przeglądarka/edytor LDAP
+Summary(pl.UTF-8):	Przeglądarka/edytor LDAP
 Name:		ldapbrowser
 Version:	2.82
 Release:	0.%{_beta}.%{_rel}
